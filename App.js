@@ -1,21 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import LogInPage from './SCREENS/LogInPage';
+import SignUpPage from './SCREENS/SignUpPage';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import WelcomePage from './SCREENS/WelcomePage';
+import HomePage from './SCREENS/HomePage';
+import MensPage from './SCREENS/MensPage';
+import WomensPage from './SCREENS/WomensPage';
+import Cart from './SCREENS/Cart';
 
-export default function App() {
+export default function App(){
+const Stack = createNativeStackNavigator();
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    <NavigationContainer>
+    <Stack.Navigator>
+       <Stack.Screen name="WelcomePage" component={WelcomePage} options = {{headerShown:false}}/>
+       <Stack.Screen name="LogInPage" component={LogInPage} options = {{headerShown:false}}/>
+       <Stack.Screen name="SignUpPage" component={SignUpPage} options = {{headerShown:false}}/>
+       <Stack.Screen name="HomePage" component={HomePage} options = {{headerShown:false}}/>
+       <Stack.Screen name="MensPage" component={MensPage} options = {{headerShown:false}}/>
+       <Stack.Screen name="WomensPage" component={WomensPage} options = {{headerShown:false}}/>
+       <Stack.Screen name="Cart" component={Cart} options = {{headerShown:false}}/>
+    </Stack.Navigator>
+    </NavigationContainer>
+      
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  );
+
+}
