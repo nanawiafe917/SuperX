@@ -8,19 +8,21 @@ import HomePage from './SCREENS/HomePage';
 import MensPage from './SCREENS/MensPage';
 import WomensPage from './SCREENS/WomensPage';
 import Cart from './SCREENS/Cart';
+import CheckOutPage from './SCREENS/CheckoutPage';
 
 export default function App(){
 const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer>
     <Stack.Navigator>
-       <Stack.Screen name="WelcomePage" component={WelcomePage} options = {{headerShown:false}}/>
-       <Stack.Screen name="LogInPage" component={LogInPage} options = {{headerShown:false}}/>
-       <Stack.Screen name="SignUpPage" component={SignUpPage} options = {{headerShown:false}}/>
-       <Stack.Screen name="HomePage" component={HomePage} options = {{headerShown:false}}/>
-       <Stack.Screen name="MensPage" component={MensPage} options = {{headerShown:false}}/>
-       <Stack.Screen name="WomensPage" component={WomensPage} options = {{headerShown:false}}/>
+       <Stack.Screen name="WelcomePage" component={WelcomePage}  options = {{headerShown:false}}/>
+       <Stack.Screen name="LogInPage" component={LogInPage}  options = {{headerShown:false}}/>
+       <Stack.Screen name="SignUpPage" component={SignUpPage}  options = {{headerShown:false}}/>
+       <Stack.Screen name="HomePage" component={HomePage}  options = {{headerShown:false}}/>
+       <Stack.Screen name="MensPage" component={MensPage}  options = {{headerShown:false}}/>
+       <Stack.Screen name="WomensPage" component={WomensPage}  options = {{headerShown:false}}/>
        <Stack.Screen name="Cart" component={Cart} options = {{headerShown:false}}/>
+       <Stack.Screen name="CheckoutPage" component={CheckOutPage} options = {{headerShown:false}}/>
     </Stack.Navigator>
     </NavigationContainer>
       
